@@ -7,12 +7,8 @@
         await page.goto("https://www.google.com/");
         await page.goBack();
 
-        await expect(page.locator("#displayed-text").isVisible());
+        await expect(page.locator("#displayed-text")).toBeVisible();
         await page.locator("#hide-textbox").click();
-        await expect(page.locator("#displayed-text").isHidden());
-     
-          
-
-     
+        await expect(page.locator("#displayed-text")).toBeHidden();
      
     })
