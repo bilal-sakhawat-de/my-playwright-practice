@@ -6,7 +6,7 @@
         await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
         await page.locator("#confirmbtn").click();
         page.on('dialog', async dialog => {
-            dialog.accept();
+            await dialog.accept();
         })
      
     })
